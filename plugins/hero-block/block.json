@@ -1,0 +1,16 @@
+{
+    "apiVersion": 2,
+    "name": "My Custom Block",
+    "title": "My Custom Block",
+    "category": "common",
+    "description": "Displays a custom Navbar and Hero section",
+    "icon": "editor-kitchensink",
+    "keywords": [
+        "navbar",
+        "hero"
+    ],
+    "supports": {
+        "html": false
+    },
+    "attributes": {}
+}
