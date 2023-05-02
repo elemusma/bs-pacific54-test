@@ -12,7 +12,7 @@ Version: 1.7.2
 Author URI: http://ma.tt/
 */
 
-function hello_dolly_get_lyric() {
+function hello_dolly_block_get_lyric() {
 	/** These are the lyrics to Hello Dolly */
 	$lyrics = "Hello, Dolly
 Well, hello, Dolly
@@ -50,15 +50,15 @@ Dolly'll never go away again";
 }
 
 // This just echoes the chosen line, we'll position it later.
-function hello_dolly() {
-	$chosen = hello_dolly_get_lyric();
+function hello_dolly_render_lyric() {
+	$chosen = hello_dolly_block_get_lyric();
 	$lang   = '';
 	if ( 'en_' !== substr( get_user_locale(), 0, 3 ) ) {
 		$lang = ' lang="en"';
 	}
 
 	printf(
-		'<p id="dolly"><span class="screen-reader-text">%s </span><span dir="ltr"%s>%s</span></p>',
+		'<span class="screen-reader-text">%s </span><span dir="ltr"%s>%s</span>',
 		__( 'Quote from Hello Dolly song, by Jerry Herman:' ),
 		$lang,
 		$chosen
